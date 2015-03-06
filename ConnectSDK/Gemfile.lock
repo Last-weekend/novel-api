@@ -1,0 +1,19 @@
+PATH
+  remote: .
+  specs:
+    ConnectSDK (1.0.2.Beta)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    json (1.8.2)
+    rake (0.9.2.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ConnectSDK!
+  bundler (~> 1.7)
+  json (~> 1.8.1)
+  rake (~> 0.9.2.2)
