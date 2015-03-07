@@ -20,6 +20,13 @@ class ImagesController < ApplicationController
     # END EXPERIMENT
 
 
+    #EXPERIMENT: From Michael, render straight json, no need for a view
+    # r = {this: "is a test", results: Image.new.results }
+    #
+    # render json: r
+    #END EXPERIMENT
+
+
 
 
     # EXPERIMENT: example code for pictaculous gem

@@ -4,9 +4,11 @@
 <p>Full JSON??</p>
 <%= @results %>
 
-<%# @results["images"].each do | image | %>
-<%#= "Id: #{image["id"]} Title: #{image["title"]}" %>
-<%# end %>
+<br><br>
+<p>Break it down now</p>
+<% @results["images"].each do | image | %>
+<%= "Id: #{image["id"]} Title: #{image["title"]}" %>
+<% end %>
 
 
 <p>response from pictaculous (please?)</p>
