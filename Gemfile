@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.2.0'
 
+gem 'curb'
 gem 'rubyctaculous', '~> 0.0.1'
 gem 'httparty', '~> 0.9.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

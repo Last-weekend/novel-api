@@ -6,7 +6,7 @@ class Image
   def initialize
     @search_results = HTTParty.get("https://api.gettyimages.com/v3/search/images?phrase=bunny&fields=id,title,thumb,referral_destinations&sort_order=best",
     :headers => {
-         "Api-Key" => "#{ENV['GETTY_TOKEN']}"})
+         "Authorization" => "Api-Key:#{ENV['GETTY_TOKEN']}"})
 
     #  @search_results = HTTParty.get("https://api.gettyimages.com/v3/search/images?phrase=bunny&fields=id,title,thumb,referral_destinations&sort_order=best",
     #  :basic_auth => {

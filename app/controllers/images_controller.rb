@@ -2,6 +2,12 @@ class ImagesController < ApplicationController
   def show
     @results = Image.new.results
 
+    #PICTACULOUS RESOURCES FOR LATER
+    # http://www.pictaculous.com/api/
+    # https://github.com/tatemae-consultancy/pictaculous
+    # https://github.com/basgys/rubyctaculous/blob/master/lib/pictaculous/client.rb
+    #END RESOURCES
+
     # EXPERIMENT: can open file as binary to feed to pictaculous?
     image = "./app/assets/images/duckling.jpg"
     # s = File.open("./app/assets/images/dont_starve.jpg", 'r') { |io| io.read }
