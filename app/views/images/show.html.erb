@@ -2,16 +2,14 @@
 <p>Find me in app/views/images/show.html.erb</p>
 
 <p>Farm Id, first value:</p>
-<% farm_id = @flickr_results["rsp"]["photos"]["photo"][0]["farm"] %>
-<p>Secret, first value:</p>
-<% secret = @flickr_results["rsp"]["photos"]["photo"][0]["secret"] %>
-<p>Id, first value:</p>
-<% id = @flickr_results["rsp"]["photos"]["photo"][0]["id"] %>
-<p>Server, first value:</p>
-<% server_id = @flickr_results["rsp"]["photos"]["photo"][0]["server"] %>
-<% size_token = "t" %>
-<p>Thumbnail, first</p>
-<%#= "https://farm#{farm_id}.staticflickr.com/#{server_id}/#{id}_#{secret}_#{size_token}.jpg" %>
+
+<%= @flickr_results["rsp"]["photos"]["photo"][0]["farm"] %>
+<p>Id</p>
+<%= @flickr_results["rsp"]["photos"]["photo"][0]["id"] %>
+<p>Secret</p>
+<%= @flickr_results["rsp"]["photos"]["photo"][0]["secret"] %>
+<p>Server</p>
+<%= @flickr_results["rsp"]["photos"]["photo"][0]["server"] %>
 <br><br>
 
 

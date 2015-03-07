@@ -23,5 +23,5 @@ class Image
   def flickr_results
     @flickr_results
   end
-  
+
 end
