@@ -4,14 +4,24 @@ class Image
   require "#{Rails.root}/ConnectSDK/lib/ConnectSDK.rb"
 
   def initialize
-    @search_results = HTTParty.get("https://api.gettyimages.com/v3/search/images?phrase=bunny&fields=id,title,thumb,referral_destinations&sort_order=best",
-    :headers => {
-         "Authorization" => "Api-Key:#{ENV['GETTY_TOKEN']}"})
+    # EXPERIMENT: No errors, but no data, says "Account Inactive"
+    # @search_results = HTTParty.get("https://api.gettyimages.com/v3/search/images?phrase=bunny&fields=id,title,thumb,referral_destinations&sort_order=best",
+    # :headers => {
+    #      "Authorization" => "Api-Key:#{ENV['GETTY_TOKEN']}"})
+    # END EXPERIMENT
 
+
+    # EXPERIMENT Trying different params in HTTParty
     #  @search_results = HTTParty.get("https://api.gettyimages.com/v3/search/images?phrase=bunny&fields=id,title,thumb,referral_destinations&sort_order=best",
     #  :basic_auth => {
     #       "Api-Key" => "#{ENV['GETTY_TOKEN']}"})
+    # END EXPERIMENT
+    
+    c = Curl.get("https://api.gettyimages.com/v3/search/images?phrase=books", {:"Api-Key" => "j878g39yx378pa77djthzzpn"})
 
+    @search_results = c.body_str
+
+    # This line works in terminal:
     # curl -i -H "Api-Key:j878g39yx378pa77djthzzpn" "https://api.gettyimages.com/v3/search/images?phrase=books"
 
     # api_key = ENV['GETTY_TOKEN']
