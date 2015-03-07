@@ -2,25 +2,45 @@
 <p>Find me in app/views/images/show.html.erb</p>
 
 <p>Farm Id, first value:</p>
-<%= @flickr_results["rsp"]["photos"]["photo"][0]["farm"] %>
-<br><br>
-<p>Flickr results</p>
-<%= @flickr_results %>
+<% farm_id = @flickr_results["rsp"]["photos"]["photo"][0]["farm"] %>
+<p>Secret, first value:</p>
+<% secret = @flickr_results["rsp"]["photos"]["photo"][0]["secret"] %>
+<p>Id, first value:</p>
+<% id = @flickr_results["rsp"]["photos"]["photo"][0]["id"] %>
+<p>Server, first value:</p>
+<% server_id = @flickr_results["rsp"]["photos"]["photo"][0]["server"] %>
+<% size_token = "t" %>
+<p>Thumbnail, first</p>
+<%#= "https://farm#{farm_id}.staticflickr.com/#{server_id}/#{id}_#{secret}_#{size_token}.jpg" %>
 <br><br>
 
-<p>Full JSON??</p>
-<%= @results %>
+
+<% @flickr_results["rsp"]["photos"]["photo"].each do |photo| %>
+  <% farm_id = photo["farm"] %>
+  <% secret = photo["secret"] %>
+  <% id = photo["id"] %>
+  <% server = photo["server"] %>
+  <% size_token = "m" %>
+  <%= link_to "image #{id}", "https://farm#{farm_id}.staticflickr.com/#{server_id}/#{id}_#{secret}_#{size_token}.jpg" %>
+<% end %>
+
+<p>Flickr results</p>
+<%#= @flickr_results %>
+<br><br>
+
+<p>Full JSON from Getty</p>
+<%#= @results %>
 
 <br><br>
 <p>Break it down now</p>
-<% @results["images"].each do | image | %>
-<%= "Id: #{image["id"]} Title: #{image["title"]} Uri: #{image["referral_destinations"][0]["uri"]}" %><br>
-<% end %>
+<%# @results["images"].each do | image | %>
+<%#= "Id: #{image["id"]} Title: #{image["title"]} Uri: #{image["referral_destinations"][0]["uri"]}" %><br>
+<%# end %>
 
 
 <br><br>
 <p>response from pictaculous (please?)</p>
-<%= @response %>
+<%#= @response %>
 
 
 
@@ -31,4 +51,4 @@
 <%#= @binary %>
 
 <p>encoding?</p>
-<%= @encoding %>
+<%#= @encoding %>
