@@ -2,6 +2,8 @@ class ImagesController < ApplicationController
   def show
     @results = Image.new.results
 
+    @flickr_results = Image.new.flickr_results
+
     #PICTACULOUS RESOURCES FOR LATER
     # http://www.pictaculous.com/api/
     # https://github.com/tatemae-consultancy/pictaculous
@@ -25,6 +27,9 @@ class ImagesController < ApplicationController
     #
     # render json: r
     #END EXPERIMENT
+
+
+    # render json: @flickr_results
 
 
 

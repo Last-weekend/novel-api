@@ -1,16 +1,24 @@
 <h1>Images#show</h1>
 <p>Find me in app/views/images/show.html.erb</p>
 
+<p>Farm Id, first value:</p>
+<%= @flickr_results["rsp"]["photos"]["photo"][0]["farm"] %>
+<br><br>
+<p>Flickr results</p>
+<%= @flickr_results %>
+<br><br>
+
 <p>Full JSON??</p>
 <%= @results %>
 
 <br><br>
 <p>Break it down now</p>
 <% @results["images"].each do | image | %>
-<%= "Id: #{image["id"]} Title: #{image["title"]}" %>
+<%= "Id: #{image["id"]} Title: #{image["title"]} Uri: #{image["referral_destinations"][0]["uri"]}" %><br>
 <% end %>
 
 
+<br><br>
 <p>response from pictaculous (please?)</p>
 <%= @response %>
 
@@ -20,7 +28,7 @@
 <!-- <img src=" <%#= @full_json["images"][0]["referral_destinations"][0]["uri"] %>"> -->
 
 <p>binary?</p>
-<%= @binary %>
+<%#= @binary %>
 
 <p>encoding?</p>
 <%= @encoding %>
