@@ -52,7 +52,6 @@ GEM
       execjs
     coffee-script-source (1.9.1)
     columnize (0.9.0)
-    curb (0.8.6)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     erubis (2.7.0)
@@ -164,7 +163,6 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
-  curb
   httparty (~> 0.9.0)
   jbuilder (~> 2.0)
   jquery-rails

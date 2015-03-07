@@ -3,6 +3,12 @@
 
 <p>Farm Id, first value:</p>
 <%= @flickr_results["rsp"]["photos"]["photo"][0]["farm"] %>
+<p>Id</p>
+<%= @flickr_results["rsp"]["photos"]["photo"][0]["id"] %>
+<p>Secret</p>
+<%= @flickr_results["rsp"]["photos"]["photo"][0]["secret"] %>
+<p>Server</p>
+<%= @flickr_results["rsp"]["photos"]["photo"][0]["server"] %>
 <br><br>
 <p>Flickr results</p>
 <%= @flickr_results %>
