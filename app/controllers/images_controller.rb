@@ -11,14 +11,13 @@ class ImagesController < ApplicationController
     #END RESOURCES
 
     # EXPERIMENT: can open file as binary to feed to pictaculous?
-    image = "./app/assets/images/duckling.jpg"
-    # s = File.open("./app/assets/images/dont_starve.jpg", 'r') { |io| io.read }
-    s = File.open(image, "rb") { |f| f.read }
-    @binary = s
-    @encoding = s.encoding
-
-    body = {image: s}
-    @response = JSON.parse(HTTParty.post("http://pictaculous.com/api/1.0", :body => body))
+    # image = "./app/assets/images/duckling.jpg"
+    # s = File.open(image, "rb") { |f| f.read }
+    # @binary = s
+    # @encoding = s.encoding
+    #
+    # body = {image: s}
+    # @response = JSON.parse(HTTParty.post("http://pictaculous.com/api/1.0", :body => body))
     # END EXPERIMENT
 
 

@@ -17,36 +17,39 @@
   <% farm_id = photo["farm"] %>
   <% secret = photo["secret"] %>
   <% id = photo["id"] %>
-  <% server = photo["server"] %>
+  <% server_id = photo["server"] %>
   <% size_token = "m" %>
   <%= link_to "image #{id}", "https://farm#{farm_id}.staticflickr.com/#{server_id}/#{id}_#{secret}_#{size_token}.jpg" %>
 <% end %>
 
-<p>Flickr results</p>
+<!-- <p>Flickr results</p> -->
 <%#= @flickr_results %>
-<br><br>
+<!-- <br><br> -->
 
-<p>Full JSON from Getty</p>
+<!--      GETTY STUFF       -->
+<!-- <p>Full JSON from Getty</p> -->
 <%#= @results %>
 
-<br><br>
-<p>Break it down now</p>
+<!-- <br><br> -->
+<!-- <p>Break it down now</p> -->
 <%# @results["images"].each do | image | %>
 <%#= "Id: #{image["id"]} Title: #{image["title"]} Uri: #{image["referral_destinations"][0]["uri"]}" %><br>
 <%# end %>
+<!--      GETTY STUFF     -->
 
 
-<br><br>
-<p>response from pictaculous (please?)</p>
+
+<!-- <br><br> -->
+<!-- <p>response from pictaculous (please?)</p> -->
 <%#= @response %>
 
 
 
-<p>First image??</p>
+<!-- <p>First image??</p> -->
 <!-- <img src=" <%#= @full_json["images"][0]["referral_destinations"][0]["uri"] %>"> -->
 
-<p>binary?</p>
+<!-- <p>binary?</p> -->
 <%#= @binary %>
 
-<p>encoding?</p>
+<!-- <p>encoding?</p> -->
 <%#= @encoding %>
