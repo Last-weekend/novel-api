@@ -27,8 +27,12 @@
 <!-- <br><br> -->
 
 <!--      GETTY STUFF       -->
-<!-- <p>Full JSON from Getty</p> -->
-<%#= @results %>
+<p>Full JSON from Getty</p>
+<!-- <%= @getty_results %> -->
+
+<% @getty_results["images"].each do |photo| %>
+  <%= photo["referral_destinations"][0]["uri"] %>
+<% end %>
 
 <!-- <br><br> -->
 <!-- <p>Break it down now</p> -->
