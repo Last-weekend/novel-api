@@ -17,11 +17,30 @@ class Image
   end
 
   def getty_results
-    @getty_results
+
+    bunny_images = []
+
+    @getty_results["images"].each do |photo|
+      bunny_images << photo["referral_destinations"][0]["uri"]
+    end
+
+    bunny_images
   end
 
   def flickr_results
-    @flickr_results
+    bunny_images = []
+    
+    @flickr_results["rsp"]["photos"]["photo"].each do |photo|
+       farm_id = photo["farm"]
+       secret = photo["secret"]
+       id = photo["id"]
+       server_id = photo["server"]
+       size_token = "m"
+       bunny_images << "https://farm#{farm_id}.staticflickr.com/#{server_id}/#{id}_#{secret}_#{size_token}.jpg"
+    end
+
+    bunny_images
+
   end
 
 end
